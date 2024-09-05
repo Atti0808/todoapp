@@ -1,0 +1,58 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+p {
+    color: red ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+body{
+    background-color:rgb(16, 86, 218) ;
+    text-align: center;
+}
+hr {
+    color : white ;
+    text-align: center;
+    
+    
+}
+footer {
+    color : white ;
+    width : 100%;
+    padding: 60px 0 100px;
+    text-align: center;
+    position :relative
+    
+    
+}
+a {
+    color: white;
+    text-align: center;
+   
+}
+
+div {
+    color: white;
+    text-align: center;
+    
+    
+}
+input{
+    position : static; 
+    size-adjust: 30px;
+    text-align: center;
+    color:black;
+    
+}
+
+h3 {
+    color: antiquewhite;
+    text-align: center;
+}
+.image {
+    width: 30px;
+}
+label {
+    color: white;
+}
