@@ -23,7 +23,11 @@
                 <label for "add">Todo task</label>
                 <input type="text" id = "Task" placeholder="New Task " required name = "task">
                 <button type="submit"> New Task </button>
+                <label for="points">Urgency of your task (1-5):</label>
+                <input type="range" id="points" name="points"min="0"max="5">
+            
              </div>  
+         
              <br>
 
         </form>
@@ -31,7 +35,7 @@
 
         <hr>
         {% for todo in todo_list %}
-        <p>{{todo.id}} : {{todo.task}} </p>
+        <p>{{todo.id}} : {{todo.task}} / {{todo.urgency}}</p>
         {% if todo.complete==False %}
         <br>
         <p>Task Incomplete. <a href="/update/{{todo.id}}">Mark as complete?</a></p>
@@ -52,10 +56,12 @@
         <form action="/comment"  method="POST">
         <div>   
             <label  for "comment" >Leave comment here </label>  
-            <input type= "text" id ="comment" placeholder="Comment" name = "comment">
+            <input type= "text" id ="comment" placeholder="Comment" name = "comment" required name="comment">
             <button type="submit">Leave Comment here</button>
-            <img class=" image" src="/website/static/images/hand.png">
-        </div> 
+            <img class=" image" src="/static/images/hand.png">
+            
+        </div>
+
         </form>
 <br>
 

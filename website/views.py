@@ -17,10 +17,12 @@ def home():
 @my_view.route("/add",methods=["POST"])
 def add():
     try:
-        task = request.form.get("task")
-        new_todo=Todo(task=task)
+        task = request.form.get("task" )
+        points = request.form.get("points")
+        new_todo=Todo(task=task , urgency = points)
         db.session.add(new_todo)
         db.session.commit()
+        
         return redirect(url_for('my_view.home'))
     except:
         message = "There was an error adding your task, please try again"

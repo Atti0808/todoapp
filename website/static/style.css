@@ -56,3 +56,6 @@ h3 {
 label {
     color: white;
 }
+.checked {
+    color:orange
+}
