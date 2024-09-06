@@ -1,15 +1,15 @@
 h1 {
-    color: red;
+    color: rgba(30, 41, 136, 0.904);
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 p {
-    color: red ;
+    color:rgba(30, 41, 136, 0.904);;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
 }
 body{
-    background-color:rgb(16, 86, 218) ;
-    text-align: center;
+    background-image: linear-gradient(rgb(81, 127, 255), rgb(207, 126, 173));
 }
 hr {
     color : white ;

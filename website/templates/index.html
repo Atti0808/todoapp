@@ -52,6 +52,7 @@
         {% for todo in todo_list %}
         <p>{{todo.id}} : {{todo.task}} / {{todo.urgency}}</p>
         {% if todo.complete==False %}
+        <img class="image2" src="/static/images/{{todo.urgency}}.jpeg">
         <br>
         <p>Task Incomplete. <a href="/update/{{todo.id}}">Mark as complete?</a></p>
        <br>
