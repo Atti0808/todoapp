@@ -1,6 +1,8 @@
 from flask import Flask, Blueprint , render_template , request , redirect , url_for
-from . models import Todo
+from .models import Todo , Comment
 from  . import db
+
+
 
 my_view = Blueprint("my_view",__name__)
 
@@ -9,7 +11,8 @@ def home():
     todo_list = Todo.query.all()
     print(todo_list)
     message = request.args.get("message" , None)
-    return render_template("index.html",todo_list = todo_list , message = message)
+    comment = Comment.query.all()
+    return render_template("index.html",todo_list = todo_list , message = message , comment = comment  )
 
 @my_view.route("/add",methods=["POST"])
 def add():
@@ -38,4 +41,15 @@ def delete(todo_id):
     db.session.commit()
     return redirect(url_for("my_view.home"))
 
-    
+@my_view.route("/comment",methods=["GET","POST"])
+def comment():
+    # try:
+        comment = request.form.get("comment")
+        new_comment=Comment(comment=comment)
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(url_for('my_view.home'))
+    # # except:
+    # #     message = "There was an error adding your task, please try again"
+    # #     return redirect(url_for('my_view.home' , message = message))
+
