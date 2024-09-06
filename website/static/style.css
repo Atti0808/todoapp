@@ -60,9 +60,13 @@ label {
     color:orange
 }
 audio{
-    size: 30px;
+    size: 100px;
     width: 100px;
     height: 100px;
     position:relative
 
+}
+.image2{
+    width:  80px;
+    height: 80px;
 }
