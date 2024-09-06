@@ -10,6 +10,7 @@ p {
 }
 body{
     background-image: linear-gradient(rgb(81, 127, 255), rgb(207, 126, 173));
+    background-attachment:fixed;
 }
 hr {
     color : white ;
